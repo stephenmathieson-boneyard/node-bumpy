@@ -17,7 +17,7 @@
 
 ## But I want to bump versions for *insert package manager here* too!
 
-  Just add/edit your `~/.bumprc` file like so:
+  Just add/edit your `~/.bumpyrc` file like so:
 
 ```js
 {
