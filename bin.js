@@ -2,7 +2,7 @@
 
 var bumpy = require('./bumpy');
 var path = require('path');
-var home = require('home-dir')();
+var home = require('home-dir').directory;
 var fs = require('fs');
 
 var releases = [ 'major', 'minor', 'patch' ];
