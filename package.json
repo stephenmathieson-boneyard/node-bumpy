@@ -1,6 +1,6 @@
 {
   "name": "bumpy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Bump version numbers in your .json files",
   "keywords": [
     "version",
