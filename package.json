@@ -1,0 +1,33 @@
+{
+  "name": "bumpy",
+  "version": "0.0.0",
+  "description": "Bump version numbers in your .json files",
+  "keywords": [
+    "version",
+    "semver"
+  ],
+  "author": "Stephen Mathieson <me@stephenmathieson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/version-bumpy-thing.git"
+  },
+  "dependencies": {
+    "semver": "~2.2.1",
+    "home-dir": "~0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "better-assert": "~1.0.0"
+  },
+  "main": "bumpy.js",
+  "bin": {
+    "bumpy": "bin.js"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/version-bumpy-thing/issues"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "license": "MIT"
+}
