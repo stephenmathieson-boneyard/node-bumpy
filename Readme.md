@@ -5,7 +5,7 @@
 
 ## Installation
 
-    $ npm install stephenmathieson/node-bumpy -g
+    $ npm install bumpy -g
 
 ## Usage
 
