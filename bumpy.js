@@ -2,6 +2,7 @@
 var semver = require('semver');
 var fs = require('fs');
 var path = require('path');
+var util = require('util');
 
 /**
  * Expose `bumpy`
@@ -19,10 +20,11 @@ module.exports = bumpy;
  */
 
 function bumpy(dir, release, cb) {
+  var current;
 
   function next(index) {
     var file = bumpy.files[index];
-    if (!file) return cb(null);
+    if (!file) return cb(null, current);
     file = path.join(dir, file);
 
     fs.readFile(file, 'utf-8', function (err, data) {
@@ -41,6 +43,15 @@ function bumpy(dir, release, cb) {
 
       var version = json.version;
       var bumped = semver.inc(version, release);
+
+      if (!current) {
+        current = bumped;
+      }
+      else if (current !== bumped) {
+        return cb({
+          message: util.format('Inconsistent versions:\n%s\t\%s\n%s\tin other files', bumped, file, current)
+        });
+      }
 
       json.version = bumped;
       var str = JSON.stringify(json, null, 2);
