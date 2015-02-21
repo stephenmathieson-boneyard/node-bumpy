@@ -38,8 +38,9 @@ if (!ignore) {
   }
 }
 
-bumpy(process.cwd(), release, function (err) {
+bumpy(process.cwd(), release, function (err, version) {
   if (err) return error(err.message);
+  if (version) console.log(version);
 });
 
 
