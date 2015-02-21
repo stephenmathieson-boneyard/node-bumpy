@@ -24,7 +24,7 @@ if (!~releases.indexOf(release)) {
 // config file support
 if (!ignore) {
   try {
-    var rc = path.join(home, '.bumprc');
+    var rc = path.join(home, '.bumpyrc');
     var data = fs.readFileSync(rc);
     var json = JSON.parse(data);
     var files = json.files;
